@@ -7,7 +7,7 @@ def test_create_new_user():
     # adding new student and fetch his id
     app_url = "https://thetestingworldapi.com/api/studentsDetails"
     #read input from json file
-    file = open("/home/rhythmic/Downloads/RestApiNew/Request.json",'r')
+    file = open("/home/rhythmic/Downloads/RestApiNew/json files/Request.json",'r')
     json_input = file.read()
     request_json = json.loads(json_input)
     response = requests.post(app_url,request_json)
@@ -17,7 +17,7 @@ def test_create_new_user():
     # add technical details
     tech_api_url = "https://thetestingworldapi.com/api/technicalskills"
     #read input from json file
-    file = open("/home/rhythmic/Downloads/RestApiNew/Techdetails.json",'r')
+    file = open("/home/rhythmic/Downloads/RestApiNew/json files/Techdetails.json",'r')
     json_input = file.read()
     request_json = json.loads(json_input)
     request_json['id'] = int(id[0])
@@ -28,7 +28,7 @@ def test_create_new_user():
     #adding addresses and fetching the complete data
     add_api_url = "https://thetestingworldapi.com/api/addresses"
     #read input from json file
-    file = open("/home/rhythmic/Downloads/RestApiNew/address.json",'r')
+    file = open("/home/rhythmic/Downloads/RestApiNew/json files/address.json",'r')
     json_input = file.read()
     request_json = json.loads(json_input)
     request_json['stId'] = id[0]
